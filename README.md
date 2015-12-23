@@ -6,8 +6,13 @@ applications using React. Currently it is still very experimental and is likely
 to change frequently.
 
 ## Requirements
-GlueStick works best with v5+ of node but some people have had success running
-it under v4. Versions prior to 4 are not currently supported.
+For best results install node version 5+ before installing. GlueStick works
+best with v5+ of node.
+
+Some people have had success running it under v4 but there have been some
+issues with 3rd party dependencies not resolving. (https://github.com/npm/npm/issues/10893)
+
+Versions prior to 4 are not supported.
 
 ## Install
 ```
