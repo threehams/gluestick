@@ -666,15 +666,15 @@ function getTodos () {
 ```
 
 The promise middleware can fire off 3 of it's own actions. If your action type
-is "GET_TODOS" then it will first dispatch "GET_TODOS_INIT". It is up to you if
+is `GET_TODOS` then it will first dispatch `GET_TODOS_INIT`. It is up to you if
 you want to handle this action or not. This is a good place to update the state
 to show a loading spinner.
 
-"GET_TODOS" will only be triggerd once the promise resolves. When you call
+`GET_TODOS` will only be triggerd once the promise resolves. When you call
 `resolve` from inside your promise, any value passed to the `resolve` method
 will be available on the action object under as `action.value`.
 
-"GET_TODOS_FAILURE" will be triggered if the promise fails to resolve. This
+`GET_TODOS_FAILURE` will be triggered if the promise fails to resolve. This
 gives you the chance to notify the user that something went wrong.
 
 ## Prefetching data with `fetchData` Earlier we mentioned the static
@@ -686,6 +686,7 @@ To use this method, simply create an action creator using the promise
 middleware and return the result of dispatching that action.
 
 Example:
+```
 import React, { Component, PropTypes } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -712,4 +713,5 @@ export default class Todos extends Component {
         );
     }
 }
+```
 
